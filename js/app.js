@@ -91,6 +91,11 @@ document.getElementById("coupon-btn").addEventListener("click", function () {
 
   const grandTotalValue = totalPrice - couponSave;
   grandTotalEl.innerText = grandTotalValue.toFixed(2);
+
+  const allInput = document.getElementsByClassName("input-field");
+  for(const input of allInput){
+    input.removeAttribute("disabled")
+  }
 });
 
 // active next but by adding phone number
